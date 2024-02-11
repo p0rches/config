@@ -5,3 +5,5 @@ vim.cmd("set shiftwidth=2")
 vim.cmd("set number")
 vim.cmd("set relativenumber")
 vim.cmd("set cursorline")
+--for obsidian
+vim.cmd("set conceallevel=1")
