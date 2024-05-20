@@ -7,7 +7,8 @@ return {
     end,
     opts = function(_, opts)
       opts.markdown = {
-        fat_headline_lower_string = "▔",
+        headline_highlights = false,
+        --fat_headline_lower_string = "▔",
       }
       return opts
     end,
