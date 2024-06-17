@@ -6,6 +6,8 @@
 vim.keymap.set("n", "<leader>OO", ":ObsidianOpen<CR>", { desc = "Open in Obsidian" })
 vim.keymap.set("n", "<leader>ON", ":ObsidianNew ", { desc = "New md file in Obsidian vault" })
 vim.keymap.set("n", "<leader>OT", ":ObsidianTemplate ", { desc = "Insert Obsidian template" })
+vim.keymap.set("n", "<leader>OF", ":ObsidianFollowLink", { desc = "Follow note reference under the cursor" })
+vim.keymap.set("n", "<leader>OL", ":ObsidianBacklinks", { desc = "Open backlinks picker" })
 
 -- Jupyter_ascending
 vim.keymap.set("n", "<leader>JE", ":call jupyter_ascending#execute()<CR>", { desc = "Execute current Jupyter cell" })
