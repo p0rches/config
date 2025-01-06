@@ -25,7 +25,7 @@ return {
           name = "brain",
           path = "~/Obsidian/Brain",
           overrides = {
-            notes_subdir = "000 Zettelkasten",
+            notes_subdir = "000_Zettelkasten",
           },
         },
       },
