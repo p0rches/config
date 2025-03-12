@@ -12,4 +12,8 @@ set tabstop=2
 set shiftwidth=2
 
 " Set bg to be transparent
-hi Normal guibg=NONE ctermbg=NONE
+highlight Normal guibg=NONE ctermbg=NONE
+
+" Set cursorline
+set cursorline
+highlight CursorLine guibg=#112233
