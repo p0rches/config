@@ -1,9 +1,7 @@
-" Set line number settings
-set number 			" Show current line number
-set relativenumber		" Show relative line number
-
-" Set tab indent to be 2 spaces
-set autoindent 
-set expandtab 
-set tabstop=2 
-set shiftwidth=2
+set relativenumber
+syntax enable
+set t_co=256
+set tabstop=4
+set shiftwidth=4
+set noexpandtab
+set autoindent
