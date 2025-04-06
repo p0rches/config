@@ -1,4 +1,4 @@
-alias ll="ls -l -a"
+alias ll="ls -l -a --color"
 alias sb="cd ~/git/brain"
 alias v=nvim
 alias vc="nvim ~/.config/nvim"
