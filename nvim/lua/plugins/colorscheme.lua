@@ -4,7 +4,7 @@ return {
   config = function ()
       require("gruvbox").setup({
           dim_inactive = false,
-          transparent_mode = false,
+          transparent_mode = true,
           palette_overrides = {
               black = "#282828",
           }
