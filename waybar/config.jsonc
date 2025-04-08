@@ -9,23 +9,21 @@
     "margin-left": 8,
 
     "modules-left": [
-        "sway/workspaces"
-    ],
-
-    "modules-center": [
-        "clock"
+        "hyprland/workspaces"
     ],
 
     "modules-right": [
-        "tray",
         "battery",
-        "pulseaudio"
+        "tray",
+        "pulseaudio",
+        "clock"
     ],
 
-    "sway/workspaces": {
-        "disable-scroll": true,
-        "all-outputs": true,
-        "tooltip": false
+    "hyprland/workspaces": {
+        "format": "{icon}",
+        "on-click": "activate",
+        "sort-by-number": true,
+        "separate-outputs": true
     },
 
     "tray": {
@@ -34,7 +32,7 @@
     },
 
     "clock": {
-        "format": "{:%H:%M - %a, %d %b %Y}",
+        "format": "{:%H:%M - %d/%m/%Y}",
         "tooltip": false
     },
 
