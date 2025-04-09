@@ -83,7 +83,7 @@
         "max-volume": 150,
         "format": "{icon} {volume}%",
         "format-bluetooth": "{icon} {volume}%",
-        "format-muted": "󰝟",
+        "format-muted": "󰝟 {volume}%",
         "format-icons": ["󰕿","󰖀","󰕾"],
         "nospacing": 1,
         "on-click": "pavucontrol",
