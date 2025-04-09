@@ -12,18 +12,30 @@
         "hyprland/workspaces"
     ],
 
+    "modules-center": [
+        "hyprland/window"
+    ],
+
     "modules-right": [
         "battery",
         "tray",
+        "network",
+        "backlight",
         "pulseaudio",
         "clock"
     ],
 
     "hyprland/workspaces": {
         "format": "{icon}",
+        "format-active": "{icon}",
         "on-click": "activate",
         "sort-by-number": true,
         "separate-outputs": true
+    },
+
+    "hyprland/window": {
+        "format": "{title}",
+        "max-length": 50
     },
 
     "tray": {
@@ -31,26 +43,48 @@
         "tooltip": false
     },
 
+    "network": {
+        "format": "{essid} {icon}",
+        "format-alt": "{ipaddr}/{cidr} {icon}",
+        "format-icons": {
+            "wifi": ["󰢼", "󰢽", "󰢾"],
+            "etherenet": [""],
+            "disconnected": ["󰢿"]
+        },
+        "on-click": "nm-connection-editor",
+        "tooltip": false
+    },
+
     "clock": {
-        "format": "{:%H:%M - %d/%m/%Y}",
+        "format": "󰥔 {:%H:%M}",
         "tooltip": false
     },
 
     "battery": {
-        "format": "bat {capacity}%",
+        "format": "{icon} {capacity}%",
+        "format-icons": ["", "", "", "", ""],
         "interval": 5,
         "states": {
             "warning": 20,
             "critical": 10
         },
-        "tooltip": false
+        "tooltip": false,
+        "on-click": "alacritty --class system_monitor -e htop"
+    },
+
+    "backlight": {
+        "format": " {percent}%",
+        "on-scroll-up": "brightnessctl set 30+",
+        "on-scroll-down": "brightnessctl set 30-"
     },
 
     "pulseaudio": {
         "scroll-step": 5,
         "max-volume": 150,
-        "format": "vol {volume}%",
-        "format-bluetooth": "vol {volume}%",
+        "format": "{icon} {volume}%",
+        "format-bluetooth": "{icon} {volume}%",
+        "format-muted": "󰝟",
+        "format-icons": ["󰕿","󰖀","󰕾"],
         "nospacing": 1,
         "on-click": "pavucontrol",
         "tooltip": false
