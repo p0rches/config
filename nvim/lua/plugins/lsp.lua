@@ -26,7 +26,7 @@ return {
                 vim.keymap.set("n", "]d", function() vim.diagnostic.goto_prev() end, { desc = "Go to previous diagnostic", buffer = bufnr, remap = false })
                 vim.keymap.set("n", "<leader>vca", function() vim.lsp.buf.code_action() end, { desc = "Open available code actions", buffer = bufnr, remap = false })
                 vim.keymap.set("n", "<leader>vrr", function() vim.lsp.buf.references() end, { desc = "List references to the current symbol", buffer = bufnr, remap = false })
-                vim.keymap.set("n", "<leader>vrn", function() vim.lsp.buf.rename() end, { desc = "Rename the current symbol", buffer = bufnr, remap = false })
+                vim.keymap.set("n", "<leader>vrn", function() vim.lsp.buf.rename() end, { desc = "Rename the current file", buffer = bufnr, remap = false })
             end
 
             local options = {
@@ -38,6 +38,8 @@ return {
             lspconfig["lua_ls"].setup( options )
             lspconfig["marksman"].setup( options )
             lspconfig["clangd"].setup( options )
+
+            vim.diagnostic.config({ virtual_text = true })
         end,
     }
 }
