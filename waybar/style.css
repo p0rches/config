@@ -1,17 +1,18 @@
 * {
     border: none;
-    border-radius: 14px;
+    border-radius: 10px;
     min-height: 0;
     font-family: "JetBrainsMono Nerd Font";
     font-weight: 500;
-    font-size: 18px;
+    font-size: 16px;
     padding: 0;
 }
 
 window#waybar {
     /* background: #1d2021; */
     background: rgba(29, 32, 33, 0.6);
-    border: 2px solid #3c3836;
+    /*border: 2px solid #3c3836;*/
+    border: 2px solid #3b3b3b;
 }
 
 tooltip {
@@ -30,18 +31,18 @@ tooltip {
     margin: 6px 6px 6px 0px;
     padding: 2px 8px;
     border: 2px solid #434a4c;
-    border-radius: 12px;
+    border-radius: 8px;
     color: #d4be98;
 }
 
 
 #window {
-    background-color: #d4be98;
+    background-color: #303536;
     margin: 6px 6px 6px 0px;
     padding: 2px 8px;
     border: 2px solid #434a4c;
-    border-radius: 12px;
-    color: #303536;
+    border-radius: 8px;
+    color: #d4be98;
 }
 
 #workspaces {
@@ -49,7 +50,7 @@ tooltip {
     margin: 6px 0px 6px 6px;
     padding: 2px;
     border: 2px solid #434a4c;
-    border-radius: 12px;
+    border-radius: 8px;
 }
 
 #workspaces button {
@@ -71,21 +72,21 @@ tooltip {
 #clock {
     background-color: #303536;
     border: 2px solid #434a4c;
-    border-radius: 12px;
+    border-radius: 8px;
     color: #d4be98;
 }
 
 #tray {
     background-color: #303536;
     border: 2px solid #434a4c;
-    border-radius: 12px;
+    border-radius: 8px;
     opacity: 1;
 }
 
 #battery {
     background-color: #a9b665;
     border: 2px solid #c7ab7a;
-    border-radius: 12px;
+    border-radius: 8px;
     color: #6c782e;
 }
 
