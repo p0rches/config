@@ -19,3 +19,9 @@ map("n", "<leader>e", "<cmd>Explore<cr>", { desc = "Open explore (netrw)" })
 
 -- toggle text wrapping
 map("n", "<leader>w", "<cmd>set wrap!<cr>", { desc = "Toggle text wrapping" })
+
+-- window navigation
+map("n", "<C-h>", "<cmd>wincmd h<cr>", { desc = "Go to the left window" })
+map("n", "<C-l>", "<cmd>wincmd l<cr>", { desc = "Go to the right window" })
+map("n", "<C-j>", "<cmd>wincmd j<cr>", { desc = "Go to the above window" })
+map("n", "<C-k>", "<cmd>wincmd k<cr>", { desc = "Go to the below window" })
