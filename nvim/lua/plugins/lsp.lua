@@ -38,6 +38,8 @@ return {
             lspconfig["lua_ls"].setup( options )
             lspconfig["marksman"].setup( options )
             lspconfig["clangd"].setup( options )
+            lspconfig["gopls"].setup( options )
+            lspconfig["dockerls"].setup( options )
 
             vim.diagnostic.config({ virtual_text = true })
         end,

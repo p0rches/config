@@ -11,15 +11,16 @@ return {
     --    })
     --    vim.cmd("colorscheme gruvbox")
     --end
-    "AlexvZyl/nordic.nvim",
-    lazy = false,
-    priority = 1000,
-    config = function()
-        require("nordic").setup({
-            transparent = {
-                bg = true,
-            }
-        })
-        require("nordic").load()
-    end
+    --"AlexvZyl/nordic.nvim",
+    --lazy = false,
+    --priority = 1000,
+    --config = function()
+    --    require("nordic").setup({
+    --        transparent = {
+    --            bg = true,
+    --        }
+    --    })
+    --    require("nordic").load()
+    --end
+    "p00f/alabaster.nvim"
 }

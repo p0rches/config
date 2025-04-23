@@ -2,7 +2,7 @@ require("config.lazy")
 require("config.keymaps")
 
 -- Set options
-vim.cmd.colorscheme("nordic")
+vim.cmd.colorscheme("alabaster")
 
 vim.opt.nu = true
 vim.opt.relativenumber = true

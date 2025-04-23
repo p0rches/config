@@ -1,0 +1,23 @@
+#!/usr/bin/env zsh
+
+## If alacritty.toml does not exist, alert
+[[ ! -f ~/.config/alacritty/alacritty.toml ]] && \
+    notify-send "alacritty.toml does not exist" && exit 0
+
+## Fetch opacity from alacritty.toml
+opacity=$(grep -E '^opacity *= *' ~/.config/alacritty/alacritty.toml \
+    | head -n1 | cut -d '=' -f2 | tr -d ' ')
+
+## Assign toggle opacity
+case $opacity in
+    1|1.0)
+        toggle_opacity=0.6
+        ;;
+    *)
+        toggle_opacity=1
+        ;;
+esac
+
+## Replace opacity value in alacritty.toml
+sed -i -- "s/^opacity *= *.*/opacity = $toggle_opacity/" \
+    ~/.config/alacritty/alacritty.toml
