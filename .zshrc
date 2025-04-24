@@ -16,7 +16,9 @@ autoload -Uz vcs_info
 precmd() { vcs_info }
 zstyle ':vcs_info:git:*' formats '%b '
 setopt PROMPT_SUBST
-PROMPT='%F{green}%~%f %F{yellow}${vcs_info_msg_0_}%f$ '
+#PROMPT='%F{green}%~%f %F{yellow}${vcs_info_msg_0_}%f$ '
+#PROMPT='%(?.%F{green}✓.%F{red}×)%f %n@%m %3~ %F{yellow}${vcs_info_msg_0_}%f$ '
+PROMPT='%(?.%F{green}✓.%F{red}×)%f %3~ %F{yellow}${vcs_info_msg_0_}%f$ '
 
 # Keybindings
 typeset -g -A key
@@ -26,3 +28,6 @@ key[Control-Left]="${terminfo[kLFT5]}"
 key[Control-Right]="${terminfo[kRIT5]}"
 [[ -n "${key[Control-Left]}"  ]] && bindkey -- "${key[Control-Left]}"  backward-word
 [[ -n "${key[Control-Right]}" ]] && bindkey -- "${key[Control-Right]}" forward-word
+
+export GIT_EDITOR=/usr/bin/vim
+export PATH=$HOME/bin:$PATH
