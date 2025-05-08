@@ -156,12 +156,21 @@ configuration {
   }
 }
 
-@theme "gruvbox-dark"
+@theme "~/.config/rofi/nord.rasi"
 
 element {
     orientation: horizontal;
     children: [ element-text, element-icon ];
     spacing: 5px;
+}
+
+listview {
+    lines: 6;
+    columns: 2;
+}
+
+window {
+    width: 30%;
 }
 
 element-icon {

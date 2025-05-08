@@ -1,0 +1,14 @@
+Kubernetes
+CoreDNS
+status
+addon
+CoreFile
+FQDN
+AWS
+GCP
+#odePort
+NodePort/!
+NodePort
+LoadBalancer
+LoadBalancers
+OSI
