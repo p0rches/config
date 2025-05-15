@@ -13,7 +13,9 @@
     ],
 
     "modules-right": [
-        "network",
+        "cpu",
+        "custom/separator",
+        "memory",
         "custom/separator",
         "battery",
         "custom/separator",
@@ -37,6 +39,20 @@
         }
     },
 
+    "cpu": {
+        "interval": 5,
+        "format": " cpu {usage}% ",
+        "tooltip": false
+    },
+
+    "memory": {
+        "interval": 5,
+        "format": " mem {used}Gi/{total}Gi ",
+        "tooltip": false,
+        "max-length": 25
+
+    },
+
     "custom/separator": {
         "format": "::",
         "interval": "once",
@@ -52,14 +68,14 @@
             "etherenet": [""],
             "disconnected": ["󰢿"]
         },
-        "tooltip": true,
-        "tooltip-format": " {bandwidthDownBytes},  {bandwidthUpBytes}"
+        "tooltip": true
+        //"tooltip-format": " {bandwidthDownBytes},  {bandwidthUpBytes}"
     },
 
     "clock": {
         "interval": 1,
         "locale": "en_GB.UTF-8",
-        "format": "time {:%Y-%m-%d %H:%M:%S}",
+        "format": "{:%Y-%m-%d %H:%M:%S}",
         "tooltip": false
     },
 
