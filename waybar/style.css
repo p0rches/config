@@ -5,15 +5,12 @@
 
 * {
     font-family: "JetBrainsMono Nerd Font";
-    font-size: 22px;
-    /*padding: 1px;*/
+    font-size: 20px;
     margin: 0;
 }
 
 window#waybar {
-    background: rgba(46, 52, 64, 0.3);
-    /*background: @background;*/
-    /*border: 1px solid @background;*/
+    background: rgba(46, 52, 64, 1);
 }
 
 #workspaces,

@@ -14,9 +14,11 @@
 
     "modules-right": [
         "network",
+        "custom/separator",
         "battery",
-        "backlight",
+        "custom/separator",
         "pulseaudio",
+        "custom/separator",
         "clock"
     ],
 
@@ -35,10 +37,16 @@
         }
     },
 
+    "custom/separator": {
+        "format": "::",
+        "interval": "once",
+        "tooltip": "false"
+    },
+
     "network": {
         "interval": 1,
-        "format": "{icon} {essid}",
-        "format-alt": "{icon} {ipaddr}/{cidr}",
+        "format": "net {icon}",
+        "format-alt": "net {ipaddr}/{cidr}",
         "format-icons": {
             "wifi": ["󰢼", "󰢽", "󰢾"],
             "etherenet": [""],
@@ -51,47 +59,26 @@
     "clock": {
         "interval": 1,
         "locale": "en_GB.UTF-8",
-        "format": "󰥔 {:%H:%M}",
-        "format-alt": "󰥔 {:%A, %d-%B-%Y, %H:%M:%S}",
-        "tooltip": true,
-        "tooltip-format": "{calendar}",
-        "calendar": {
-            "mode": "year",
-            "mode-mon-col": 3,
-            "weeks-pos": "left",
-            "on-scroll": 1,
-            "format": {
-                "months":   "<span color='#ffead3'><b>{}</b></span>",
-                "days":     "<span color='#ecc6d9'><b>{}</b></span>",
-                "weeks":    "<span color='#99ffdd'><b>W{}</b></span>",
-                "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
-                "today":    "<span color='#ff6699'><b><u>{}</u></b></span>"
-            }
-        }
+        "format": "time {:%Y-%m-%d %H:%M:%S}",
+        "tooltip": false
     },
 
     "battery": {
-        "format": "{icon} {capacity}%",
+        "format": "bat {capacity}%",
         "format-icons": ["", "", "", "", ""],
         "interval": 5,
         "states": {
             "warning": 20,
             "critical": 10
         },
-        "tooltip": false,
-        "on-click": "alacritty --class system_monitor -e htop"
-    },
-
-    "backlight": {
-        "format": " {percent}%",
-        "on-scroll-up": "brightnessctl set 30+",
-        "on-scroll-down": "brightnessctl set 30-"
+        "tooltip": false
+        //"on-click": "alacritty --class system_monitor -e htop"
     },
 
     "pulseaudio": {
         "scroll-step": 5,
         "max-volume": 150,
-        "format": "{icon} {volume}%",
+        "format": "vol {volume}%",
         "format-bluetooth": "{icon} {volume}%",
         "format-muted": "󰝟 {volume}%",
         "format-icons": ["󰕿","󰖀","󰕾"],
