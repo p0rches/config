@@ -24,12 +24,12 @@ return {
         }
 
         dashboard.section.buttons.val = {
-           dashboard.button("e",       "New file", "<cmd>ene <CR>"),
-           dashboard.button("SPC f f", "Find file"),
-           dashboard.button("SPC f h", "Recently opened files"),
-           dashboard.button("SPC f g", "Find word"),
-           dashboard.button("SPC l",   "Open LazyUI"),
-           dashboard.button("q",       "Quit", "<cmd>q! <CR>")
+           dashboard.button("e", "New file",              "<cmd>ene <CR>"),
+           dashboard.button("f", "Find file",             "<cmd>FzfLua files<CR>"),
+           dashboard.button("h", "Recently opened files", "<cmd>FzfLua oldfiles<CR>"),
+           dashboard.button("g", "Find word (cwd)",       "<cmd>FzfLua grep<CR>"),
+           dashboard.button("l", "Open LazyUI",           "<cmd>Lazy<CR>"),
+           dashboard.button("q", "Quit",                  "<cmd>q! <CR>")
         }
 
         alpha.setup(dashboard.opts)

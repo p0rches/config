@@ -13,7 +13,9 @@ return {
                 "go",
                 "dockerfile"
             },
-            highlight = { enable = true },
+            highlight = {
+                enable = true,
+            },
         })
     end
 }

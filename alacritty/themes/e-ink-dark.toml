@@ -1,0 +1,38 @@
+# Colors (E-ink dark)
+
+# Default colors
+[colors.primary]
+background = '#333333'
+foreground = '#C2C2C2'
+
+# Cursor colors
+[colors.cursor]
+text = '#0e1415'
+cursor = '#fad8bb'
+
+# Selection colors
+[colors.selection]
+text = '#000000'
+background = '#293334'
+
+# Normal colors
+[colors.normal]
+black   = '#333333'
+red     = '#CCCCCC'
+green   = '#686868'
+yellow  = '#7C7C7C'
+blue    = '#868686'
+magenta = '#5E5E5E'
+cyan    = '#B8B8B8'
+white   = '#fad8bb'
+
+# Bright colors
+[colors.bright]
+black   = '#A4A4A4'
+red     = '#CCCCCC'
+green   = '#686868'
+yellow  = '#7C7C7C'
+blue    = '#868686'
+magenta = '#5E5E5E'
+cyan    = '#B8B8B8'
+white   = '#fad8bb'

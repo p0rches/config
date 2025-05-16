@@ -22,5 +22,12 @@ return {
     --    })
     --    require("nordic").load()
     --end
-    "p00f/alabaster.nvim"
+    --"p00f/alabaster.nvim",
+    "alexxGmZ/e-ink.nvim",
+    priority = 1000,
+    config = function ()
+        require("e-ink").setup()
+        vim.cmd.colorscheme "e-ink"
+        vim.opt.background = "dark"
+    end
 }
