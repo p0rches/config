@@ -1,6 +1,6 @@
-@define-color foreground #eeeeee;
+@define-color foreground #C2C2C2;
 @define-color foreground-inactive #aaaaaa;
-@define-color background rgba(46, 52, 64, 0.6); /*2e3440 303536*/
+@define-color background #333333;
 @define-color background-active #4b556e;
 
 * {
@@ -10,7 +10,7 @@
 }
 
 window#waybar {
-    background: rgba(46, 52, 64, 1);
+    background: @background;
 }
 
 #workspaces,
@@ -21,14 +21,13 @@ window#waybar {
 #tooltip,
 #network,
 #pulseaudio {
-    background-color: @background;
-    padding: 1px 8px;
+    padding: 0px 8px;
     color: @foreground;
 }
 
 #workspaces button {
     color: @foreground;
-    padding: 0px 2px;
+    padding: 0px 1px;
     border-radius: 0px;
 }
 

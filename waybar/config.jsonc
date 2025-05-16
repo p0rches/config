@@ -47,7 +47,7 @@
 
     "memory": {
         "interval": 5,
-        "format": " mem {used}Gi/{total}Gi ",
+        "format": " mem {used:0.2f}/{total:0.2f}Gi ",
         "tooltip": false,
         "max-length": 25
 
