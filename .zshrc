@@ -14,11 +14,11 @@ fi
 # Prompt customisation
 autoload -Uz vcs_info
 precmd() { vcs_info }
-zstyle ':vcs_info:git:*' formats '%b '
+zstyle ':vcs_info:git:*' formats ' (%b)'
 setopt PROMPT_SUBST
 #PROMPT='%F{green}%~%f %F{yellow}${vcs_info_msg_0_}%f$ '
 #PROMPT='%(?.%F{green}✓.%F{red}×)%f %n@%m %3~ %F{yellow}${vcs_info_msg_0_}%f$ '
-PROMPT='%(?.%F{green}✓.%F{red}×)%f %3~ %F{yellow}${vcs_info_msg_0_}%f$ '
+PROMPT='%3~${vcs_info_msg_0_} $ '
 
 # Keybindings
 typeset -g -A key
