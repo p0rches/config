@@ -1,11 +1,12 @@
 @define-color foreground #C2C2C2;
 @define-color foreground-inactive #aaaaaa;
 @define-color background #333333;
-@define-color background-active #4b556e;
+@define-color background-active #FAD8BB;
 
 * {
-    font-family: "JetBrainsMono Nerd Font";
+    font-family: "IosevkaTerm Nerd Font";
     font-size: 20px;
+    font-weight: bold;
     margin: 0;
 }
 
@@ -37,6 +38,6 @@ window#waybar {
 }
 
 #workspaces button.active {
-    color: @foreground;
+    color: @background;
     background-color: @background-active;
 }
